@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Bharat Nourish</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -13,42 +17,43 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 20px;
       background: #fffaf4;
+      animation: fadeIn 1.2s ease-in;
     }
 
     header {
       text-align: center;
-      padding-bottom: 20px;
-      border-bottom: 2px solid #e0c9a6;
+      padding: 30px 20px;
+      background: linear-gradient(to right, #e8d3b0, #f7efe3);
     }
 
     header h1 {
+      font-size: 40px;
       margin: 0;
-      font-size: 36px;
       color: #8b4a1d;
     }
 
     header p {
-      margin: 5px 0;
-      font-size: 14px;
+      margin: 6px 0;
     }
 
-    .tagline {
-      font-weight: 600;
-      margin-top: 8px;
+    .hero-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 0 0 20px 20px;
     }
 
     section {
-      margin: 30px 0;
+      padding: 30px 20px;
     }
 
     h2 {
       color: #8b4a1d;
-      border-bottom: 1px solid #d9b98c;
-      padding-bottom: 5px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     .grid {
@@ -59,39 +64,67 @@
 
     .card {
       background: #f4e6d3;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card h3 {
-      margin-top: 0;
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .icon {
+      font-size: 32px;
       color: #6d3a14;
+      margin-bottom: 10px;
     }
 
     .delivery {
-      text-align: center;
       background: #efe1cc;
-      padding: 20px;
-      border-radius: 12px;
-      font-size: 18px;
-      font-weight: bold;
+      margin: 20px;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 20px;
+      animation: pulse 2s infinite;
     }
 
     footer {
-      margin-top: 30px;
-      padding-top: 20px;
-      border-top: 2px solid #e0c9a6;
+      background: #e8d3b0;
+      padding: 25px 20px;
       text-align: center;
       font-size: 14px;
     }
 
-    .contact p {
-      margin: 6px 0;
+    .social i {
+      margin: 0 10px;
+      font-size: 20px;
+      cursor: pointer;
     }
 
-    .social span {
-      margin: 0 8px;
-      font-weight: bold;
+    .social i:hover {
+      color: #8b4a1d;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
@@ -101,42 +134,35 @@
 
   <header>
     <h1>भारत NOURISH</h1>
-    <p class="tagline">Premium Quality | Stone Ground | Freshly Milled</p>
+    <p><strong>Premium Quality | Stone Ground | Freshly Milled</strong></p>
     <p>Food Solutions That You Can Trust</p>
   </header>
+
+  <!-- Hero Image -->
+  <img class="hero-img" src="https://images.unsplash.com/photo-1606788075765-42f4b7c4a4b8" alt="Healthy grains">
 
   <section>
     <h2>Millets</h2>
     <div class="grid">
       <div class="card">
+        <i class="fas fa-leaf icon"></i>
+        <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5" alt="Millets">
         <h3>Easy Digestion</h3>
-        <p>Gentle on the stomach and nutritious.</p>
+        <p>Light, nutritious & gut-friendly grains.</p>
       </div>
-      <div class="card">
-        <h3>Grown Just the Right Way</h3>
-        <p>Naturally cultivated with care.</p>
-      </div>
-      <div class="card">
-        <h3>More Fiber</h3>
-        <p>Helps improve gut health.</p>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <h2>Rice & Grains</h2>
-    <div class="grid">
       <div class="card">
-        <h3>Brown Rice</h3>
-        <p>Healthy rice with rich nutrition.</p>
+        <i class="fas fa-seedling icon"></i>
+        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d" alt="Natural farming">
+        <h3>Naturally Grown</h3>
+        <p>Cultivated with care and purity.</p>
       </div>
+
       <div class="card">
-        <h3>Smart Grains</h3>
-        <p>Super Grains – Super Giving.</p>
-      </div>
-      <div class="card">
-        <h3>Grains That Care</h3>
-        <p>For your diet and well-being.</p>
+        <i class="fas fa-heart-pulse icon"></i>
+        <img src="https://images.unsplash.com/photo-1608198093002-de5f7c86c5e8" alt="Fiber rich">
+        <h3>Fiber Rich</h3>
+        <p>Supports heart & digestive health.</p>
       </div>
     </div>
   </section>
@@ -145,34 +171,41 @@
     <h2>Whole Wheat Flour</h2>
     <div class="grid">
       <div class="card">
+        <i class="fas fa-mortar-pestle icon"></i>
+        <img src="https://images.unsplash.com/photo-1582515073490-39981397c445" alt="Stone ground flour">
         <h3>Stone Ground</h3>
-        <p>Traditional milling for better nutrition.</p>
+        <p>Traditional chakki grinding.</p>
       </div>
+
       <div class="card">
+        <i class="fas fa-bread-slice icon"></i>
+        <img src="https://images.unsplash.com/photo-1546549039-9a37c88b1a3f" alt="Fresh flour">
+        <h3>Freshly Milled</h3>
+        <p>Ground daily for best taste.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-wheat-awn icon"></i>
+        <img src="https://images.unsplash.com/photo-1627485937980-221c88ac04f4" alt="Mineral rich wheat">
         <h3>Mineral Rich</h3>
-        <p>Retains natural minerals and taste.</p>
-      </div>
-      <div class="card">
-        <h3>Daily Freshness</h3>
-        <p>Freshly milled for everyday meals.</p>
+        <p>Retains natural nutrients.</p>
       </div>
     </div>
   </section>
 
-  <section class="delivery">
-    🚚 FREE DELIVERY<br>
+  <div class="delivery">
+    🚚 FREE DELIVERY <br>
     <small>Up to 3 KM</small>
-  </section>
+  </div>
 
   <footer>
-    <div class="contact">
-      <p>📞 +91 XXXXXXXXXX</p>
-      <p>📧 info@bharatnourish.com</p>
-      <p>📍 Made in India | Made with Love</p>
-    </div>
+    <p>📞 +91 XXXXXXXXXX | 📧 info@bharatnourish.com</p>
     <div class="social">
-      <span>Instagram</span> • <span>Facebook</span> • <span>YouTube</span>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-youtube"></i>
     </div>
+    <p>Made in India 🇮🇳 | Made with Love</p>
   </footer>
 
 </div>
